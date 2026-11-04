@@ -1,0 +1,66 @@
+{
+  "angle_map_quadrature": {
+    "display_bin_width_deg": 1,
+    "fine_bin_width_deg": 0.125,
+    "nodes": 65536,
+    "variable": "eccentric anomaly",
+    "weights": "(1-e*cos(E))/nodes"
+  },
+  "file_sha256": {
+    "angle_likelihood_grid.npz": "13b7be3d7b7ce762e5fac479c83f46806b351fce725d483843de84ae51447c33",
+    "eccentricity_posterior.csv": "74aff29de731cd3b8fccbef1be86c309dce433e1d93d867d223bf3e50deb8b60",
+    "mock_observation.json": "83dcf19ec24f2a9726a1910d6073adfeb6d63c407df9129a4f4cb9d56c54c8b5",
+    "pds70_gravity_astrometry.csv": "d86ede60cbe0987e038f6990473cbb1b3a43655d81db2abc5a119f7bbae731f2",
+    "phase_draws.csv": "317c9bf42a828c4bc950262a2120aede56fa8973a6cee00f983c8ebd88b822d0"
+  },
+  "inference": {
+    "GM": 1,
+    "a": 1,
+    "angle_unit": "degrees",
+    "eccentricity_domain": [
+      0,
+      0.995
+    ],
+    "eccentricity_nodes": 601,
+    "geometry": "face-on Keplerian relative orbit",
+    "main_prior": "uniform in eccentricity",
+    "phase_prior": "uniform observation time, hence uniform mean anomaly",
+    "phase_quadrature_nodes": 8192
+  },
+  "observed_data": {
+    "file": "pds70_gravity_astrometry.csv",
+    "method": "numeric transcription of published table; all digits retained",
+    "rows": 4,
+    "source": "Wang et al. (2021), Table 2",
+    "units": {
+      "coordinates_and_uncertainties": "mas",
+      "correlation": "dimensionless",
+      "mjd": "days"
+    },
+    "url": "https://arxiv.org/html/2101.04187v2",
+    "use": "observational context only, not used for the mock eccentricity posterior"
+  },
+  "packages": {
+    "matplotidlib": "0.1.0",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "plot_style": {
+    "package": "matplotidlib",
+    "selected_font": "AVHershey Simplex"
+  },
+  "python_version": "3.13.13",
+  "seeds": {
+    "mc_check": 44,
+    "mock_observation": 42,
+    "phase_demo": 43
+  },
+  "synthetic_outputs": [
+    "mock_observation.json",
+    "eccentricity_posterior.csv",
+    "phase_draws.csv",
+    "angle_likelihood_grid.npz"
+  ],
+  "tutorial": "Mills 2b"
+}

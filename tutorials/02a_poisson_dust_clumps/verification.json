@@ -1,0 +1,46 @@
+{
+  "all_passed": true,
+  "checks": {
+    "both_injected_centers_flagged": true,
+    "control_counts_preserve_population": true,
+    "control_rate_consistent_with_generating_rate": true,
+    "coordinates_within_periodic_domain": true,
+    "exported_coordinates_roundtrip": true,
+    "exported_truth_labels_roundtrip": true,
+    "independent_annuli_have_small_correlation": true,
+    "independent_ensemble_means_match": true,
+    "independent_ensemble_variances_match": true,
+    "joint_probability_normalizes": true,
+    "ordinary_edges_differ_as_expected": true,
+    "outer_annulus_has_three_times_area": true,
+    "periodic_wrap_and_self_exclusion": true,
+    "pmf_matches_scipy": true,
+    "pmf_normalizes": true,
+    "poisson_grid_mle_matches_sample_mean": true,
+    "tail_probability_monotone": true,
+    "tree_matches_direct_geometry": true,
+    "zero_rate_has_correct_support": true
+  },
+  "metrics": {
+    "background_population": 10085,
+    "center_local_pvalues": [
+      2.661136793492829e-40,
+      1.4661614087301655e-25
+    ],
+    "ensemble_correlation": 0.01966588996821691,
+    "ensemble_means": [
+      12.556,
+      37.76775
+    ],
+    "ensemble_variances": [
+      13.059364000000008,
+      37.44480993749962
+    ],
+    "estimated_background_intensity": 10021.0,
+    "flagged_grid_positions": 25,
+    "known_null_map_threshold": 1.388888888888889e-05,
+    "lambda_cell_analytic_mle": 16.0336,
+    "lambda_cell_grid_mle": 16.032,
+    "scene_population": 10385
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "annular_edges_over_H": [
+    0.0,
+    0.02,
+    0.04
+  ],
+  "background_intensity_per_H2": 10000.0,
+  "background_population": 10085,
+  "base_seed": 42,
+  "bit_generator": "PCG64",
+  "boundary": "ordinary doubly periodic square, not shearing-box dynamics",
+  "box_side_over_H": 1.0,
+  "clump_centers_over_H": [
+    [
+      0.28,
+      0.32
+    ],
+    [
+      0.72,
+      0.7
+    ]
+  ],
+  "clump_populations": [
+    200,
+    100
+  ],
+  "clump_sigma_over_H": [
+    0.02,
+    0.015
+  ],
+  "control_cells_per_side": 25,
+  "control_population": 10021,
+  "coordinates": "dimensionless x/H and y/H; equal numerical tracer weights",
+  "data_kind": "synthetic teaching data, not observations or hydrodynamic outputs",
+  "familywise_alpha_known_null": 0.05,
+  "file_sha256": {
+    "background.csv": "b813d0b7cb854344dfdff2cbd41ec3c79d268fc4906c318be671b9b3d53bb13a",
+    "control_cell_counts.csv": "d25433b51803a0621268058ec79b662af6050e20f537fb60fda60e86a324f648",
+    "control_points.csv": "6976bab7e7eec779ec0d9906f377983e56a41c2a708c724c3e77194b487a0379",
+    "particles_with_clumps.csv": "b83aacc439e087608e0e2ccbff1144695c25a57b5445ce20fcaa84b3fb72c95e"
+  },
+  "generator": "poisson_dust_clumps.ipynb",
+  "grid_size": 60,
+  "main_search_radius_over_H": 0.02,
+  "origin_labels": {
+    "0": "background",
+    "1": "clump A",
+    "2": "clump B"
+  },
+  "packages": {
+    "matplotidlib": "0.1.0",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "plot_style": {
+    "package": "matplotidlib",
+    "selected_font": "AVHershey Simplex"
+  },
+  "python_version": "3.13.13",
+  "scientific_references": [
+    "https://arxiv.org/abs/astro-ph/0409263",
+    "https://arxiv.org/abs/astro-ph/0702626"
+  ],
+  "seeds": {
+    "annuli": 43,
+    "background": 42,
+    "clumps": 44,
+    "control": 45
+  }
+}

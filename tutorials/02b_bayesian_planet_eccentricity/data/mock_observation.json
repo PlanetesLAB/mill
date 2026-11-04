@@ -1,0 +1,10 @@
+{
+  "generating_e": 0.45,
+  "generating_mean_anomaly_rad": 0.8,
+  "generating_true_anomaly_rad": 1.7001775788270805,
+  "kind": "synthetic, not a PDS 70 measurement",
+  "measured_angle_deg": 66.17460712410376,
+  "seed": 42,
+  "sigma_angle_deg": 5.0,
+  "true_angle_deg": 64.6510217253316
+}

@@ -1,0 +1,58 @@
+{
+  "all_passed": true,
+  "checks": {
+    "angle_and_phase_marginalization_agree": true,
+    "angle_likelihood_rows_normalize": true,
+    "angular_momentum_is_conserved": true,
+    "apsidal_angles_are_90": true,
+    "binned_posteriors_normalize": true,
+    "circular_angle_is_90": true,
+    "closed_formula_matches_vectors": true,
+    "eccentricity_priors_normalize": true,
+    "faceon_angles_within_exact_bounds": true,
+    "finite_bin_respects_geometric_support": true,
+    "gaussian_posteriors_normalize": true,
+    "inclined_circle_breaks_faceon_bound": true,
+    "independent_monte_carlo_agrees": true,
+    "kepler_equation_residual_small": true,
+    "measurement_error_softens_exact_bound": true,
+    "median_stable_on_refined_e_grid": true,
+    "mock_posterior_is_finite_nonnegative": true,
+    "mock_posterior_normalizes": true,
+    "orbital_energy_is_conserved": true,
+    "posterior_cdf_is_monotone": true,
+    "published_astrometry_has_four_rows": true,
+    "published_covariances_positive_definite": true,
+    "published_epoch_order_correct": true,
+    "refined_e_grid_agrees": true,
+    "refined_phase_grid_agrees": true,
+    "reflected_angles_give_same_posterior": true,
+    "saved_posterior_roundtrip": true,
+    "time_phase_measure_normalizes": true,
+    "toy_phase_measure_normalizes": true
+  },
+  "metrics": {
+    "circular_projected_angle_deg": 126.86989764584402,
+    "e_grid_refinement_L1_difference": 1.561209250777663e-06,
+    "marginalization_posterior_L1_difference": 0.00012490807353160777,
+    "mc_likelihood": 0.008724730913134145,
+    "mc_standard_error": 6.394668989190158e-05,
+    "mock_measured_angle_deg": 66.17460712410376,
+    "mock_posterior": {
+      "central68": [
+        0.3807331902065025,
+        0.7155926810856489
+      ],
+      "central95": [
+        0.28047025440387885,
+        0.9079887217169526
+      ],
+      "map": 0.452725,
+      "median": 0.5069339850662427
+    },
+    "mock_true_angle_deg": 64.6510217253316,
+    "phase_grid_refinement_L1_difference": 6.557370169102393e-08,
+    "posterior_mass_e_above_0_98": 0.0021323350196609174,
+    "quadrature_likelihood": 0.008747953541002915
+  }
+}
