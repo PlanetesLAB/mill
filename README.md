@@ -45,6 +45,35 @@ After installation, the notebook calculations need no network access. The HTML
 previews embed their figures and load MathJax from a public CDN to typeset
 equations. The HTML versions can be read without running Python.
 
+## Run in the browser
+
+The GitHub Pages build serves the notebooks directly through JupyterLite.
+Open a notebook under `tutorials` and choose **Run → Run All Cells**. Python runs
+in your browser; no local installation or notebook server is needed. The first
+launch downloads the Python runtime and packages. Download your edited notebook
+to keep a copy; browser changes do not update this repository.
+
+To publish, enable **Settings → Pages → Source → GitHub Actions**, then push the
+build setup to `main` (or run **Build and deploy notebooks** from Actions).
+The deployed address will be <https://planeteslab.github.io/mills/>.
+Pull requests build the site without deploying it.
+
+To build and preview locally:
+
+    uv sync --locked --extra web
+    uv run --locked --extra web python scripts/build_site.py
+    uv run python -m http.server --directory _site
+
+Open <http://localhost:8000/>. The build discovers tutorial notebooks and bundles
+their neighboring data folders automatically. It adds a plotting-package setup
+cell to browser copies, using the same pinned matplotidlib source. Source
+notebooks and their saved HTML are unchanged. Pyodide supplies browser-compatible
+NumPy, SciPy, and Matplotlib; `uv.lock` defines the native reference environment.
+
+This setup is only for runnable notebooks. The planned mdBook presentation layer
+can be added later. Future tutorials with packages unavailable in Pyodide will
+need a different execution backend.
+
 ## Plot style
 
 All figures use [PlanetesLAB/matplotidlib](https://github.com/PlanetesLAB/matplotidlib).
