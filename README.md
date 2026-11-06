@@ -55,16 +55,22 @@ to keep a copy; browser changes do not update this repository.
 
 To publish, enable **Settings → Pages → Source → GitHub Actions**, then push the
 build setup to `main` (or run **Build and deploy notebooks** from Actions).
-The deployed address will be <https://planeteslab.github.io/mills/>.
+The deployed address will be <https://planeteslab.github.io/mill/>.
 Pull requests build the site without deploying it.
 
 To build and preview locally:
 
     uv sync --locked --extra web
     uv run --locked --extra web python scripts/build_site.py
-    uv run python -m http.server --directory _site
+    uv run python -m http.server --bind 127.0.0.1 --directory _site
 
-Open <http://localhost:8000/>. The build discovers tutorial notebooks and bundles
+Open <http://127.0.0.1:8000/>. Use this address for local previews: Firefox can
+crash during Pyodide startup when the preview is opened at the IPv6 address
+`http://[::1]:8000`, because JupyterLite encodes that address incorrectly in its
+file-access requests. If this happens, reopen the notebook at the IPv4 address
+above with a fresh kernel.
+
+The build discovers tutorial notebooks and bundles
 their neighboring data folders automatically. It adds a plotting-package setup
 cell to browser copies, using the same pinned matplotidlib source. Source
 notebooks and their saved HTML are unchanged. Pyodide supplies browser-compatible
